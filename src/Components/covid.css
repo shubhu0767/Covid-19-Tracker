@@ -1,0 +1,36 @@
+*{
+    background-image: url(/src/Components/COVID-19.jpg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+    
+}
+
+.header{
+    text-align: center;
+    margin: 60px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-main{
+    border: solid 2px white;
+    width: 150px;
+    padding: 50px;
+    margin: 50px;
+}
+
+.data{
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
