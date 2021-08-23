@@ -35,19 +35,19 @@ const Covid = () => {
                     <div className="card-main">
                         <div className="card-inner">
                             <p className="data">Country</p>
-                            <p className="data">ALL</p>
+                            <h3 className="data">ALL</h3>
                         </div>
                     </div>
                     <div className="card-main">
                         <div className="card-inner">
                             <p className="data">New Confirm</p>
-                            <p className="data">{data.NewConfirmed}</p>
+                            <h3 className="data">{data.NewConfirmed}</h3>
                         </div>
                     </div>
                     <div className="card-main">
                         <div className="card-inner">
                             <p className="data">Total Confirmed</p>
-                            <p className="data">{data.TotalConfirmed}</p>
+                            <h3 className="data">{data.TotalConfirmed}</h3>
                         </div>
                     </div>
                 </div>
@@ -55,19 +55,19 @@ const Covid = () => {
                     <div className="card-main">
                         <div className="card-inner">
                             <p className="data">Total Death</p>
-                            <p className="data">{data.TotalDeaths}</p>
+                            <h3 className="data">{data.TotalDeaths}</h3>
                         </div>
                     </div>
                     <div className="card-main">
                         <div className="card-inner">
                             <p className="data">New Deaths</p>
-                            <p className="data">{data.NewDeaths}</p>
+                            <h3 className="data">{data.NewDeaths}</h3>
                         </div>
                     </div>
                     <div className="card-main">
                         <div className="card-inner">
                             <p className="data">Upadated</p>
-                            <p className="data">{data.Date}</p>
+                            <h3 className="data">{data.Date}</h3>
                         </div>
                     </div>
                 </div>
