@@ -6,7 +6,7 @@ const Covid = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        // https://api.covid19india.org/data.json
+
         const getCovidData = async () => {
             try {
                 const res = await fetch('https://api.covid19api.com/summary');
