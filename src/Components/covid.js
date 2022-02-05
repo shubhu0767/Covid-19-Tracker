@@ -8,6 +8,8 @@ const Covid = () => {
 
     useEffect(() => {
 
+        // Using Async, await and Fetch
+
         // const getCovidData = async () => {
         //     try {
         //         const res = await fetch('https://api.covid19api.com/summary');
@@ -18,16 +20,17 @@ const Covid = () => {
         //         console.log(err);
         //     }
         // }
-            axios.get('https://api.covid19api.com/summary')
-                .then(res =>{
-                    console.log(res.data.Countries.76);
-                    setData(res.data.Global);
-                })
-                .catch(error => console.log(error))
-          
 
         // getCovidData();
 
+                // Using Axios
+
+            axios.get('https://api.covid19api.com/summary')
+                .then(res =>{
+                    console.log(res.data.Global);
+                    setData(res.data.Global);
+                })
+                .catch(error => console.log(error))
     }, [])
 
     return (
