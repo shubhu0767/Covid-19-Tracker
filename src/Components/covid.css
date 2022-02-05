@@ -11,7 +11,7 @@
 
 .header{
     text-align: center;
-    margin: 60px;
+    margin: 3.7rem;
     color: white;
     text-transform: uppercase;
 }
@@ -24,13 +24,21 @@
 
 .card-main{
     border: solid 2px white;
-    width: 150px;
-    padding: 50px;
-    margin: 50px;
+    width: 9.3rem;
+    padding: 3.1rem;
+    margin: 3.1rem;
+    overflow: hidden;
+
 }
 
 .data{
     text-align: center;
     color: white;
     font-weight: 500;
+    margin-top: .5rem;
+}
+
+#date{
+    width: 16rem;
+    text-align: center;
 }

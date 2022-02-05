@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './covid.css';
 
@@ -7,21 +8,26 @@ const Covid = () => {
 
     useEffect(() => {
 
-        const getCovidData = async () => {
-            try {
-                const res = await fetch('https://api.covid19api.com/summary');
-                const actualData = await res.json();
-                console.log(actualData.Global);
-                setData(actualData.Global);
-            } catch (err) {
-                console.log(err);
-            }
-        }
+        // const getCovidData = async () => {
+        //     try {
+        //         const res = await fetch('https://api.covid19api.com/summary');
+        //         const actualData = await res.json();
+        //         console.log(actualData);
+        //         setData(actualData.Global);
+        //     } catch (err) {
+        //         console.log(err);
+        //     }
+        // }
+            axios.get('https://api.covid19api.com/summary')
+                .then(res =>{
+                    console.log(res.data.Countries.76);
+                    setData(res.data.Global);
+                })
+                .catch(error => console.log(error))
+          
 
-        getCovidData();
-        return () => {
+        // getCovidData();
 
-        }
     }, [])
 
     return (
@@ -42,6 +48,7 @@ const Covid = () => {
                         <div className="card-inner">
                             <p className="data">New Confirm</p>
                             <h3 className="data">{data.NewConfirmed}</h3>
+
                         </div>
                     </div>
                     <div className="card-main">
@@ -66,14 +73,14 @@ const Covid = () => {
                     </div>
                     <div className="card-main">
                         <div className="card-inner">
-                            <p className="data">Upadated</p>
-                            <h3 className="data">{data.Date}</h3>
+                            <p className="data">Last Upadated</p>
+                            <h3 className="data" id="date">{data.Date}</h3>
                         </div>
                     </div>
                 </div>
             </section>
         </>
-    )
+    );
 }
 
-export default Covid
+export default Covid;
